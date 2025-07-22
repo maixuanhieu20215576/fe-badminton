@@ -47,11 +47,13 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import PlayerManagement from "pages/player-management";
+import Schedule from "pages/schedule";
 
 const routes = [
   {
     type: "collapse",
-    name: "Profile",
+    name: "Hồ sơ",
     key: "profile",
     icon: <Icon fontSize="small">person</Icon>,
     route: "/profile",
@@ -62,8 +64,16 @@ const routes = [
     name: "Quản lý lông thủ",
     key: "user",
     icon: <Icon fontSize="small">sports_tennis</Icon>,
-    route: "/profile",
-    component: <Profile />,
+    route: "/player-management",
+    component: <PlayerManagement />,
+  },
+  {
+    type: "collapse",
+    name: "Quản lý lịch thi đấu",
+    key: "schedule",
+    icon: <Icon fontSize="small">calendar_month</Icon>,
+    route: "/schedule",
+    component: <Schedule />,
   },
   {
     type: "collapse",
